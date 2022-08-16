@@ -16,5 +16,8 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
                  newNote += " ";
                  chrome.storage.sync.set({'note': newNote});
              })
+
+             chrome.tabs.create({'url': chrome.extension.getURL('popup.html')});
     }
+
 })
